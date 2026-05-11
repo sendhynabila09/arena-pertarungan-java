@@ -9,6 +9,9 @@ public abstract class Musuh2 {
 
       public void terimaDamage(int damage) {
         this.healthPoint -= damage;
+        if (this.healthPoint < 0) {
+            this.healthPoint = 0;
+        }
         System.out.println(this.namaMusuh + "terkena serangan! Sisa HP: " + this.healthPoint);
       }
 

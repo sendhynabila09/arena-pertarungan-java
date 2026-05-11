@@ -1,7 +1,12 @@
-public class Slime2 extends Musuh2 {
+public class Slime2 extends Musuh2 implements BisaLoot {
     
     public Slime2() {
         super("Slime Asam", 50);
+    }
+
+    @Override
+    public void jatuhkanItem() {
+        System.out.println(this.namaMusuh + "Slime menjatuhkan item: Gel Asam!.");
     }
     
     @Override

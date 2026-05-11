@@ -1,4 +1,4 @@
-public class Zombie2 extends Musuh2 {
+public class Zombie2 extends Musuh2 implements BisaLoot {
     
     public Zombie2() {
         super("Zombie ngesot", 150);
@@ -12,5 +12,10 @@ public class Zombie2 extends Musuh2 {
     @Override
     public void suaraKhas(){
         System.out.println(this.namaMusuh + "Zombie: Uwaaaagh...");
+    }
+
+    @Override
+    public void jatuhkanItem() {
+        System.out.println(this.namaMusuh + "Zombie menjatuhkan item: Daging Busuk!.");
     }
 }

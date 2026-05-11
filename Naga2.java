@@ -1,4 +1,4 @@
-public class Naga2 extends Musuh2 {
+public class Naga2 extends Musuh2 implements BisaTerbang, BisaLoot {
     
     public Naga2() {
         super("Naga Api Pink", 500);
@@ -14,4 +14,18 @@ public class Naga2 extends Musuh2 {
         System.out.println(this.namaMusuh + "Naga: ROAAARRR!");
     }
 
+    @Override
+    public void lepasLandas() {
+        System.out.println(this.namaMusuh + "terbang tinggi! Sulit diserang." );
+    }
+
+    @Override
+    public void seranganUdara() {
+        System.out.println(this.namaMusuh + "menyemburkan badai api! Pemain -80 HP.");
+    }
+
+    @Override
+    public void jatuhkanItem() {
+        System.out.println(this.namaMusuh + "Naga menjatuhkan item: Sisik Naga api!.");
+    }
 }
